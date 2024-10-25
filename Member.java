@@ -1,17 +1,17 @@
 public class Member {
-    String memberID, name, membershipType, email, phoneNumber, status;
+    String memberID, name, membershipType, mail, phoneNumber, status;
 
-    public Member(String memberID, String name, String membershipType, String email, String phoneNumber, String status) {
+    public Member(String memberID, String name, String membershipType, String mail, String phoneNumber, String status) {
         this.memberID = memberID;
         this.name = name;
         this.membershipType = membershipType;
-        this.email = email;
+        this.mail = mail;
         this.phoneNumber = phoneNumber;
         this.status = status;
     }
 
     public String lineRepresentation(){
-        return (memberID + "," + name + "," + membershipType + "," + email + "," + phoneNumber + "," + status);
+        return (memberID + "," + name + "," + membershipType + "," + mail + "," + phoneNumber + "," + status);
     }
 
     public String getSearchKey(){
