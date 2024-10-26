@@ -27,6 +27,10 @@ public class MemberClassRegistration {
         return (memberID + classID);
     }
 
+    public void setStatus(String status){
+        this.status = status;
+    }
+
     public String lineRepresentation(){
         return (memberID + "," + classID + "," + registrationDate + "," + status);
     }
