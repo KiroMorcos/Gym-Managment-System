@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
-public class AdminRole {
-    private TrainerDatabase database;
+public class AdminRole implements FileNames{
+    public TrainerDatabase database;
 
     public AdminRole() {
-        database = new TrainerDatabase("Trainer");
+        this.database = new TrainerDatabase(TRAINER_FILENAME);
     }
 
     public void addTrainer(String trainerID,String name,String mail,String speciality,String phoneNumber){

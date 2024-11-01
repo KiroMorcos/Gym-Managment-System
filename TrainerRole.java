@@ -2,15 +2,15 @@ import java.util.ArrayList;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
-public class TrainerRole {
+public class TrainerRole implements FileNames{
     private MemberDatabase memberDatabase;
     private ClassDatabase classDatabase;
     private MemberClassRegistrationDatabase registrationDatabase;
 
     public TrainerRole() {
-        this.memberDatabase = new MemberDatabase("Members");
-        this.classDatabase = new ClassDatabase("Class");
-        this.registrationDatabase = new MemberClassRegistrationDatabase("Registration");
+        this.memberDatabase = new MemberDatabase(MEMBER_FILENAME);
+        this.classDatabase = new ClassDatabase(CLASS_FILENAME);
+        this.registrationDatabase = new MemberClassRegistrationDatabase(REGISTRATION_FILENAME);
     }
 
     public void addMember(String memberID, String name, String membershipType, String mail, String phoneNumber, String status) {

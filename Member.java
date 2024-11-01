@@ -1,20 +1,19 @@
-public class Member {
-    String memberID, name, membershipType, mail, phoneNumber, status;
+public class Member extends Human{
+    private String  membershipType, status;
 
     public Member(String memberID, String name, String membershipType, String mail, String phoneNumber, String status) {
-        this.memberID = memberID;
-        this.name = name;
+        super(memberID, name, mail, phoneNumber);
         this.membershipType = membershipType;
-        this.mail = mail;
-        this.phoneNumber = phoneNumber;
         this.status = status;
     }
 
+    @Override
     public String lineRepresentation(){
-        return (memberID + "," + name + "," + membershipType + "," + mail + "," + phoneNumber + "," + status);
+        return (id + "," + name + "," + membershipType + "," + mail + "," + phoneNumber + "," + status);
     }
 
+    @Override
     public String getSearchKey(){
-        return memberID;
+        return id;
     }
 }

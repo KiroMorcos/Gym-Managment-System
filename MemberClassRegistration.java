@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class MemberClassRegistration {
+public class MemberClassRegistration extends Interface{
     private String memberID, classID, status;
     private LocalDate registrationDate;
 
@@ -23,6 +23,7 @@ public class MemberClassRegistration {
         return registrationDate;
     }
 
+    @Override
     public String getSearchKey(){
         return (memberID + classID);
     }
@@ -31,6 +32,7 @@ public class MemberClassRegistration {
         this.status = status;
     }
 
+    @Override
     public String lineRepresentation(){
         return (memberID + "," + classID + "," + registrationDate + "," + status);
     }

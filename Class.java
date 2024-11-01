@@ -1,4 +1,4 @@
-public class Class {
+public class Class extends Interface{
    private String classID, className, trainerID;
    private int duration, availableSeats;
 
@@ -18,10 +18,12 @@ public class Class {
         this.availableSeats = availableSeats;
     }
 
+    @Override
     public String lineRepresentation(){
         return ( classID + "," + className + "," + trainerID + "," + duration + "," + availableSeats);
     }
 
+    @Override
     public String getSearchKey(){
         return classID;
     }

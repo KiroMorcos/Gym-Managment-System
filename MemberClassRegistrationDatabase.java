@@ -1,10 +1,4 @@
-import javax.xml.crypto.Data;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.time.LocalDate;
-import java.util.*;
 
 public class MemberClassRegistrationDatabase extends Database<MemberClassRegistration> {
 
@@ -35,7 +29,7 @@ public class MemberClassRegistrationDatabase extends Database<MemberClassRegistr
             String[] tokens = record.lineRepresentation().split(",");
             if (tokens[3].equalsIgnoreCase("cancelled"))
             {
-                record.setRegistrationStatus("Active");
+                record.setStatus("Active");
                 return true;
             }
             return false;
