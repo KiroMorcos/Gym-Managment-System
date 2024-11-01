@@ -1,19 +1,33 @@
-public class Trainer {
-    private String trainerID, name, mail, speciality, phoneNumber;
+public class Trainer extends Human{
+    private String  speciality;
 
     public Trainer(String trainerID, String name, String mail, String speciality, String phoneNumber) {
-        this.trainerID = trainerID;
-        this.name = name;
-        this.mail = mail;
+        super(trainerID, name, mail, phoneNumber);
         this.speciality = speciality;
-        this.phoneNumber = phoneNumber;
     }
 
+    @Override
     public String lineRepresentation(){
-        return trainerID+","+name+","+mail+","+speciality+","+phoneNumber;
+        return id + "," + name + "," + mail + "," + speciality + "," + phoneNumber;
     }
 
-    public String getSearchKey(){
-        return trainerID;
+    public String getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return mail;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getSpeciality() {
+        return speciality;
     }
 }
